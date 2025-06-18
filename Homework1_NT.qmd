@@ -1,0 +1,44 @@
+---
+title: "STAT40830 Homework 1"
+author: "Neal Tuffy Student Number 02454220"
+format: html
+editor: visual
+---
+
+## <b>Palmer Penguins Dataset</b>
+
+The Palmer Penguins dataset consists of data taken on 3 different species of penguins based in Antarctica. The specis are \textcolor{blue}{Adelie, Chinstrap and Gentoo}. The dataset contains measurements taken on Flipper Length, Bill length, Body Mass, sex, Island and Species.
+
+```{r, message=FALSE, warning=FALSE}
+# Load the required libraries
+library(palmerpenguins)
+library(ggplot2)
+```
+
+We can summarise the dataframe as shown:
+
+```{r}
+# summarise the dataset
+summary(penguins)
+```
+
+## <b>Plot of Flipper Length vs Body Mass</b>
+
+We can investigate the relationship between flipper length and body mass of the penguins. We also colour the plot by species.
+
+```{r, message=FALSE, warning=FALSE}
+# Create the plot
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() +
+  labs(
+    title = "Flipper Length vs. Body Mass for Palmer Penguins",
+    x = "Flipper Length (mm)",
+    y = "Body Mass (g)"
+  ) +
+  theme_minimal()
+
+```
+
+## <b>Plot Summary</b>
+
+Adelie penguins make up 44% of the dataset and tend to have shorter flipper lengths and body mass. The Gentoo species are seen to be on average the largest species, with longest flipper lengtha nd greater body mass. Also, the chipstrap tend to be larger than Adelie but on average small than the chinstrap species.
