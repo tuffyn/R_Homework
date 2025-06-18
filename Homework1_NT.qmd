@@ -1,6 +1,6 @@
 ---
 title: "STAT40830 Homework 1"
-author: "Neal Tuffy Student Number (02454220)"
+author: "Neal Tuffy (02454220)"
 date: "18 June 2025"
 format: html
 editor: visual
